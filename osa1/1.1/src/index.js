@@ -17,7 +17,7 @@ const Content = (props) => (
 
 const Total = (props) => (
   <div>
-    <p>{props.total}</p>
+    <p>Number of exercises {props.total}</p>
   </div>
 )
 
