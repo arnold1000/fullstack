@@ -39,7 +39,7 @@ const App = () => {
 
   const personsToShow = persons.filter(filter => filter.name.toLowerCase().includes(newFilter))
 
-  const renderPerson = () => personsToShow.map(person => <li key = {person.name}>{person.name} {person.number}</li>)
+  const renderPerson = () => personsToShow.map(person => <p key = {person.name}>{person.name} {person.number}</p>)
 
   return (
     <div>
@@ -66,9 +66,7 @@ const App = () => {
         </div>
       </form>
       <h2>Numbers</h2>
-      <ul>
         {renderPerson()}
-      </ul>
     </div>
   )
 
