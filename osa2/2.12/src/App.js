@@ -29,17 +29,14 @@ const renderCountry = () => {
     return <p>Too many matches, specify another filter</p>
   } else if (countriesToShow.length === 1){
     return (
-      countriesToShow.map(country =>
         <div>
-        <h1 key = {country.name}>{country.name}</h1>
-        <p>capital {country.capital}</p>
-        <p>population {country.population}</p>
+        <h1>{countriesToShow[0].name}</h1>
+        <p>capital {countriesToShow[0].capital}</p>
+        <p>population {countriesToShow[0].population}</p>
         <h2>languages</h2>
-        {country.languages.map(language => <li key = {language.name}>{language.name}</li>)}
-        <img src={country.flag} alt={"Logo"} width={250}/>
+        {countriesToShow[0].languages.map(language => <li key = {language.name}>{language.name}</li>)}
+        <img src={countriesToShow[0].flag} alt={"Logo"} width={250}/>
         </div>
-
-      )
     )
   } else {
     return countriesToShow.map(country => <p key = {country.name}>{country.name}</p>)
