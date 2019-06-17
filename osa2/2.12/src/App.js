@@ -21,7 +21,6 @@ const handleFilterChange = (event) => {
 
 const countriesToShow = newCountry.filter(country => country.name.toLowerCase().includes(newFilter))
 
-console.log(countriesToShow)
 
 const renderCountry = () => {
   if(newFilter === ''){
