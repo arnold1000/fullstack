@@ -40,9 +40,6 @@ const App = () => {
 
   }
 
-  const personsToShow = persons.filter(filter => filter.name.toLowerCase().includes(newFilter))
-
-  const renderPerson = () => personsToShow.map(person => <p key = {person.name}>{person.name} {person.number}</p>)
 
   return (
     <div>
@@ -51,7 +48,7 @@ const App = () => {
       <h2>add a new</h2>
       <PersonForm submit = {addPerson} name = {newName} number = {newNumber} namechange = {handleNameChange} numberchange = {handleNumberChange}/>
       <h2>Numbers</h2>
-      <Persons allpeople = {renderPerson()}/>
+      <Persons allpeople = {persons} usefilter = {newFilter}/>
     </div>
   )
 
